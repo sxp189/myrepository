@@ -8,9 +8,9 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<- y
                 m <<- NULL
         }
-        get <- function() x
-        setmean <- function(mean) m <<- mean
-        getmean <- function() m
+        get <- function(x)
+        setmean <- function(m)
+        getmean <- function(m)
         list(set= set, get= get,
                 setmean= setmean,
                 getmean= getmean)
