@@ -1,6 +1,6 @@
 ## create a cache for the matrix
 
-## Write a short comment describing this function
+## This function will create a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -9,7 +9,8 @@ makeCacheMatrix <- function(x = matrix()) {
                 m <<- NULL
         }
         get <- function(x)
-        setmean <- function(m)
+        setmean <- function(mean)
+                m <<- mean
         getmean <- function(m)
         list(set= set, get= get,
                 setmean= setmean,
@@ -27,7 +28,7 @@ cacheSolve <- function(x, ...) {
                 return(m)
         }
         data <- x$get()
-        m <- mean(data, ...)
+        m <- solve(data, ...)
         x$setmean(m)
         m
 }
